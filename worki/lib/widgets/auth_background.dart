@@ -28,8 +28,8 @@ class AuthBackground extends StatelessWidget {
 
   BoxDecoration _degradadoAbajo() => const BoxDecoration(
           gradient: LinearGradient(colors: [
-        AppTheme.orangeDegradentIzq,
-        AppTheme.orangeDegradentDer,
+        AppTheme.grayDegradentIzq,
+        AppTheme.grayDegradentDer,
       ]));
 }
 

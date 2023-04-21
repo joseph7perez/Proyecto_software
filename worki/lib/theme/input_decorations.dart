@@ -12,7 +12,7 @@ class InputDecorations{
       hintText: hintText,
       labelText: labelText,
       labelStyle: const TextStyle(
-        color: AppTheme.bloodOrange,
+        color: AppTheme.graySoft,
       ),
     );
   }
