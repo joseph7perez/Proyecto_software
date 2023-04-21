@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../Ingenieria de Software/Proyecto_software"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp",
+			"deque": "cpp",
+			"string": "cpp",
+			"vector": "cpp",
+			"ostream": "cpp",
+			"iomanip": "cpp"
+		}
+	}
+}
