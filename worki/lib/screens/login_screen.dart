@@ -77,11 +77,11 @@ class _LoginForm extends StatelessWidget {
                 MaterialButton(
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                   elevation: 0,
-                  color: AppTheme.royalBlue,
+                  color: AppTheme.bloodOrange,
                   child: Container(
                     padding: const EdgeInsets.all(20),
                     child: const Text(
-                      'Ingresar',
+                      'Cancelar',
                       style: TextStyle(
                         color: AppTheme.whitePaper,
                       ),  
