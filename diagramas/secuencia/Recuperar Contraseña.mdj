@@ -4,25 +4,6 @@
 	"name": "Untitled",
 	"ownedElements": [
 		{
-			"_type": "UMLModel",
-			"_id": "AAAAAAFF+qBWK6M3Z8Y=",
-			"_parent": {
-				"$ref": "AAAAAAFF+h6SjaM2Hec="
-			},
-			"name": "Model",
-			"ownedElements": [
-				{
-					"_type": "UMLClassDiagram",
-					"_id": "AAAAAAFF+qBtyKM79qY=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "Main",
-					"defaultDiagram": true
-				}
-			]
-		},
-		{
 			"_type": "UMLCollaboration",
 			"_id": "AAAAAAGHoI49XJXaaS4=",
 			"_parent": {
@@ -2492,9 +2473,6 @@
 								"$ref": "AAAAAAGHoI49XZXbB2g="
 							},
 							"name": "Usuario",
-							"represent": {
-								"$ref": "AAAAAAGHoJfASpXswgs="
-							},
 							"isMultiInstance": false
 						},
 						{
@@ -2504,9 +2482,6 @@
 								"$ref": "AAAAAAGHoI49XZXbB2g="
 							},
 							"name": "BD Datos",
-							"represent": {
-								"$ref": "AAAAAAGHoJkrV5YYKEk="
-							},
 							"isMultiInstance": false
 						}
 					],
@@ -2593,34 +2568,6 @@
 							]
 						}
 					]
-				}
-			],
-			"attributes": [
-				{
-					"_type": "UMLAttribute",
-					"_id": "AAAAAAGHoJfASpXswgs=",
-					"_parent": {
-						"$ref": "AAAAAAGHoI49XJXaaS4="
-					},
-					"name": "Role1",
-					"type": ""
-				},
-				{
-					"_type": "UMLAttribute",
-					"_id": "AAAAAAGHoJkrV5YYKEk=",
-					"_parent": {
-						"$ref": "AAAAAAGHoI49XJXaaS4="
-					},
-					"name": "Role2"
-				},
-				{
-					"_type": "UMLAttribute",
-					"_id": "AAAAAAGHoJmalJY5uLk=",
-					"_parent": {
-						"$ref": "AAAAAAGHoI49XJXaaS4="
-					},
-					"name": "Role3",
-					"type": ""
 				}
 			]
 		}
