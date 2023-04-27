@@ -17,7 +17,7 @@ class AppTheme{
   static const Color grayDegradentDer =  Color.fromRGBO(221, 222, 222, 1);
 
   //Logo
-  static const String logo = 'https://play-lh.googleusercontent.com/mVBNa3n1IAJQtvTiLmkoBWd54wRxflnrJsmhxfOIT2LnzlV7SIx0QG32NbJHVnTQXw';
+  static const String logo = 'lib/imgs/Logo_Worki.png';//'https://play-lh.googleusercontent.com/mVBNa3n1IAJQtvTiLmkoBWd54wRxflnrJsmhxfOIT2LnzlV7SIx0QG32NbJHVnTQXw';
 
   //Fuente
   static const TextStyle titulo1 = TextStyle(

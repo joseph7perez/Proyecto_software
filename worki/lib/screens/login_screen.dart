@@ -81,7 +81,7 @@ class _LoginForm extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.all(20),
                     child: const Text(
-                      'Cancelar',
+                      'Crear Cuenta',
                       style: TextStyle(
                         color: AppTheme.whitePaper,
                       ),  

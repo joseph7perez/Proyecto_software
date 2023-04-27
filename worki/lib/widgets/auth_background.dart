@@ -19,7 +19,7 @@ class AuthBackground extends StatelessWidget {
           _BlueBox(),
           //Logo
           _HeaderIcon(),
-
+          //Widget Login
           this.child,
         ],
       ),
@@ -42,10 +42,10 @@ class _HeaderIcon extends StatelessWidget {
         margin: const EdgeInsets.all(35),
         alignment: Alignment.topCenter,
         child: const CircleAvatar(
-          maxRadius: 100,
-          backgroundImage: NetworkImage(
+          maxRadius: 165,
+          backgroundImage: AssetImage(AppTheme.logo),/* NetworkImage(
             AppTheme.logo,
-          ),
+          ), */
         ),
       ),
     );
