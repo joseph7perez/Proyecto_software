@@ -1,21 +1,20 @@
-import 'models.dart';
+import 'package:components/models/tareas_personales_model.dart';
+import 'package:components/models/rank_model.dart';
 
 class InformacionWorkiModel{
   String arroba;
-  List<String>? sectores;
   String password;
+  List<String>? sectores;
   String? fotoPerfil;
   RankModel rank;
-  List<Usuaio> lideres;
-  List<Usuaio> seguidores;
+  List<String>? lideres;
+  List<String>? seguidores;
+  TareasPersonalesModel? misTareas;
+  List<String>? ultimasBusquedas;
 
   InformacionWorkiModel({
     required this.arroba,
-    required this.sectores,
     required this.password,
-    required this.fotoPerfil,
     required this.rank,
-    required this.lideres,
-    required this.seguidores
   });
 }

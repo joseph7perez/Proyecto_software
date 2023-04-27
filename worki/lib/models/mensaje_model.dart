@@ -1,9 +1,11 @@
 class MensajeModel{
-  String tipoMensaje;
-  String contenido; //url
+  String contenido;
+  String autor;
+  String fechaEnviado;
 
   MensajeModel({
-    required this.tipoMensaje,
     required this.contenido,
+    required this.autor,
+    required this.fechaEnviado,
   });
 }

@@ -1,9 +1,6 @@
-class  NotificacionModel{
-  TareaModel tarea;
+abstract class NotificacionModel {
   String descripcion;
+  String? codigoTarea;
 
-  NotificacionModel({
-    required this.tarea,
-    required this. descripcion,
-  })
+  NotificacionModel({required this.descripcion, this.codigoTarea});
 }
