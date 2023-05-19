@@ -1,6 +1,6 @@
 {
-    "name": "components",
-    "short_name": "components",
+    "name": "worki",
+    "short_name": "worki",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
