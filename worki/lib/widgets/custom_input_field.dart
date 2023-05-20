@@ -39,12 +39,12 @@ class CustomInputField extends StatelessWidget {
       },
       validator: (value) {
         if(value==null) return "Valor requerido";
-        if(value.length<3) return "Minimo 3 caracteres";
+        if(keyboardType==TextInputType.emailAddress && !value.contains('@')) return 'Formato incorrecto';
       },
       //autofocus: true,
       keyboardType: keyboardType,
       obscureText: obscureText,
-      autovalidateMode: AutovalidateMode.disabled,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hintText,
         labelText: labelText,
