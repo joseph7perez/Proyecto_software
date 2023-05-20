@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:worki/widgets/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
   
@@ -6,9 +7,16 @@ class LoginScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('LoginScreen'),
+
+    final size = MediaQuery.of(context).size;
+
+    return Scaffold(
+      body: AuthBackgroundScreen(
+        child: Container(
+          width: 100,
+          height: 100,
+          color: Colors.blue,
+        ),
       ),
     );
   }

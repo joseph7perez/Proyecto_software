@@ -16,6 +16,12 @@ class AppTheme{
   static const Color grayDegradentIzq =  Color.fromRGBO(164, 183, 183, 1);
   static const Color grayDegradentDer =  Color.fromRGBO(221, 222, 222, 1);
 
+  static BoxDecoration degradado({required Color color1, required  Color color2}){
+    return BoxDecoration(
+      gradient: LinearGradient(colors: [color1,color2]),
+    );
+  } 
+
   //Logo
   static const String logo = 'assets/icons/logo_circular_pesado.png';
 
@@ -23,6 +29,8 @@ class AppTheme{
   static const TextStyle titulo1 = TextStyle(
     fontSize: 25,
   );
+
+
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     primaryColor: primaryColor,

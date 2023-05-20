@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:worki/routers/app_routes.dart';
+import 'package:worki/theme/app_theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,15 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Worki',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.getAppRoutes(),
+      theme: AppTheme.lightTheme,
     );
   }
 }
