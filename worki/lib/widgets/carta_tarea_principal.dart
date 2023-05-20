@@ -26,10 +26,18 @@ class CartaTareaPrincipal extends StatelessWidget {
           itemWidth: size.width*0.9,
           itemHeight: size.height*0.8,
           itemBuilder: (context, index) {
-            return FadeInImage(
-              placeholder:  AssetImage('assets/imgs/carta_defecto.jpg'),
-              image: NetworkImage(tareas[index].urlImagen??'https://i.pinimg.com/564x/92/6e/93/926e93819b099eb79c9ad706032a70ae.jpg'),
-              fit: BoxFit.cover,
+            return GestureDetector(
+              onTap: (){
+                Navigator.pushNamed(context, '/tarea_detallada', arguments: tareas[index]);
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: FadeInImage(
+                  placeholder:  AssetImage('assets/imgs/carta_defecto.jpg'),
+                  image: NetworkImage(tareas[index].urlImagen??'https://i.pinimg.com/564x/92/6e/93/926e93819b099eb79c9ad706032a70ae.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
             );
           },
         ),

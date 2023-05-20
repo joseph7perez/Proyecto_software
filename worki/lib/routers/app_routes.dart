@@ -9,6 +9,7 @@ class AppRoutes{
     appRoutes.addAll({ '/login' : (context) => LoginScreen()});
     appRoutes.addAll({ '/sign_up' : (context) => const SignUpScreen()});
     appRoutes.addAll({ '/home' : (context) => HomeScreen()});
+    appRoutes.addAll({ '/tarea_detallada' : (context) => TareaDetalladaScreen()});
     return appRoutes;
   }
 }
