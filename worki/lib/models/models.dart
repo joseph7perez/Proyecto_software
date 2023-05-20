@@ -19,5 +19,4 @@ export 'package:worki/models/numero_celular_model.dart';
 export 'package:worki/models/rank_model.dart';
 export 'package:worki/models/tarea_model.dart';
 export 'package:worki/models/tareas_personales_model.dart';
-export 'package:worki/models/ubicacion_model.dart';
 export 'package:worki/models/usuario_model.dart';

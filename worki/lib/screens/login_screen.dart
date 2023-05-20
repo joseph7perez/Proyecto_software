@@ -64,7 +64,7 @@ class _FormCamps extends StatelessWidget {
           SizedBox(height: 30,),
           CustomInputField(
             hintText: '123456',
-            labelText: 'Conraseña',
+            labelText: 'Contraseña',
             icon: Icon(Icons.password_outlined),
             formProperty: 'password',
             formValues: formValues,

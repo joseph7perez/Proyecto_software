@@ -5,7 +5,7 @@ class InformacionWorkiModel{
   String password;
   List<String>? sectores;
   String? fotoPerfil;
-  RankModel rank;
+  RankModel? rank;
   List<String>? lideres;
   List<String>? seguidores;
   TareasPersonalesModel? misTareas;
@@ -14,6 +14,7 @@ class InformacionWorkiModel{
   InformacionWorkiModel({
     required this.arroba,
     required this.password,
-    required this.rank,
+    this.sectores,
+    this.fotoPerfil = 'assets/imgs/foto_perfil_defecto.jpg',
   });
 }

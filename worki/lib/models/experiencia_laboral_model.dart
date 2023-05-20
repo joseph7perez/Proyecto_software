@@ -4,7 +4,7 @@ class ExperienciaLaboralModel extends ExperienciaModel{
   String cargo;
   String tipoEmpleo;
   String tipoUbicacion;
-  List<UbicacionModel> ubicacion;
+  List<String> ubicacion;
   String sector;
 
   ExperienciaLaboralModel({

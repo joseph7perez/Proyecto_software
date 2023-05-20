@@ -7,7 +7,7 @@ class InformacionPersonalModel{
   NumeroCelularModel celular;
   String fechaNacimiento;
   String genero;
-  UbicacionModel lugarResidencia;
+  String lugarResidencia;
   int cedula;
 
   InformacionPersonalModel({

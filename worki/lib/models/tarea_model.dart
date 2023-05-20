@@ -13,7 +13,7 @@ class TareaModel{
   double rankMinimo;
   List<String> requerimientos;
   String tipoUbicacion;
-  UbicacionModel? ubicacion;
+  String? ubicacion;
   String fechaPlazo;
 
   TareaModel({
