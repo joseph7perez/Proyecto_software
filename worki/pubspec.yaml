@@ -76,7 +76,7 @@ flutter:
     - assets/icons/logo_circular_liviano.png
     - assets/icons/logo_circular_pesado.png
     - assets/imgs/foto_perfil_defecto.jpg
-    - assets/imgs/
+    - assets/imgs/loading.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

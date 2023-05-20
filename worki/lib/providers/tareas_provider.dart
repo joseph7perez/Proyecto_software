@@ -18,7 +18,7 @@ class TareasProvider extends ChangeNotifier{
     tareas.addAll({
       '10' : TareaModel(
         codigo: '10', 
-        creador: 'josep', 
+        creador: '@joseph', 
         estado: 'Por hacer', 
         titulo: 'Chef Junior',
         descripcion: 'Para cocinar en casa familiar los fin de semana en hora de almuerzo (11:00am-2:00pm)', 
@@ -34,7 +34,7 @@ class TareasProvider extends ChangeNotifier{
 
       '000012' : TareaModel(
         codigo: '000012', 
-        creador: 'majo', 
+        creador: '@majo', 
         estado: 'Por hacer', 
         titulo: 'Niñera para niña de 8 años.',
         sectores: List.generate(1, (index) => 'Doméstico'), 
@@ -49,7 +49,7 @@ class TareasProvider extends ChangeNotifier{
 
       '02:55am' : TareaModel(
         codigo: '02:55am', 
-        creador: 'aleal', 
+        creador: '@aleal', 
         estado: 'Haciendo', 
         titulo: 'Desarrollador Movil.',
         descripcion: 'Para presentar aplicacion llamada worki.',

@@ -35,6 +35,7 @@ class UsuariosProvider extends ChangeNotifier{
         informacionWorki: InformacionWorkiModel(
           arroba: '@aleal', 
           password: 'aleal',
+          fotoPerfil: 'https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2016/09/569465-whatsapp-que-tus-contactos-ponen-rana-perfil.jpg?itok=tpvHWpeZ',
         ),
       ),
 
@@ -75,6 +76,7 @@ class UsuariosProvider extends ChangeNotifier{
         informacionWorki: InformacionWorkiModel(
           arroba: '@joseph', 
           password: 'joseph',
+          fotoPerfil: 'https://falabella.scene7.com/is/image/FalabellaCO/5369705_1?wid=1500&hei=1500&qlt=70',
         ),
       ),
     });

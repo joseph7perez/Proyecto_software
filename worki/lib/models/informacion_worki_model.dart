@@ -15,6 +15,6 @@ class InformacionWorkiModel{
     required this.arroba,
     required this.password,
     this.sectores,
-    this.fotoPerfil = 'assets/imgs/foto_perfil_defecto.jpg',
+    this.fotoPerfil,
   });
 }
