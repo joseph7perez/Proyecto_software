@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ItemPrincipal(
         bottomNavigationBarItem: BottomNavigationBarItem(
           icon: Icon(Icons.home_outlined),
-          label: 'Tareas Disponibles',
+          label: 'Tareas',
         ),
         widget: TareasDisponiblesView(),
       ),
@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     ];
 
-    int itemActual = 0;
+    int itemActual = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        showUnselectedLabels: false,
         backgroundColor: AppTheme.primaryColor,
         selectedItemColor: AppTheme.whitePaper,
         unselectedItemColor: AppTheme.secundaryColor,
