@@ -8,7 +8,7 @@ class TareaModel{
   CalificacionModel? calificacion;
   String? empleado;
   String titulo;
-  String descripcion;
+  String? descripcion;
   List<String> sectores;
   double presupuesto;
   double rankMinimo;
@@ -25,7 +25,7 @@ class TareaModel{
     this.calificacion,
     this.empleado,
     required this.titulo,
-    required this.descripcion,
+    this.descripcion,
     required this.sectores,
     required this.presupuesto,
     required this.rankMinimo,
