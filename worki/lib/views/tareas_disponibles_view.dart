@@ -1,6 +1,6 @@
-import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:worki/models/models.dart';
+import 'package:worki/providers/providers.dart';
 import 'package:worki/theme/app_theme.dart';
 import 'package:worki/widgets/widgets.dart';
 
@@ -11,6 +11,7 @@ class TareasDisponiblesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    final tareasProvider = Provider.of<TareasProvider>(context);
     final size = MediaQuery.of(context).size;
     final UsuarioModel usuario = ModalRoute.of(context)?.settings.arguments as UsuarioModel;
 
@@ -21,7 +22,7 @@ class TareasDisponiblesView extends StatelessWidget {
         child: Column(
           children:[
             BarraSuperiorTareas(),
-            CartaTareaPrincipal(size: size),
+            CartaTareaPrincipal(size: size, tareas: tareasProvider.listaTareas,),
           ] 
         ),
       )

@@ -13,7 +13,6 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final usuariosProvider = Provider.of<UsuariosProvider>(context);
-    final tareasProvider = Provider.of<TareasProvider>(context);
     final size = MediaQuery.of(context).size;
 
     return Scaffold(

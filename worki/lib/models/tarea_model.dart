@@ -16,6 +16,7 @@ class TareaModel{
   String tipoUbicacion;
   String ubicacion;
   String fechaPlazo;
+  String? urlImagen;
 
   TareaModel({
     required this.codigo,
@@ -33,5 +34,6 @@ class TareaModel{
     required this.tipoUbicacion,
     required this.ubicacion,
     required this.fechaPlazo,
+    this.urlImagen,
   });
 }

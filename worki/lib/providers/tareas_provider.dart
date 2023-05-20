@@ -3,9 +3,15 @@ import 'package:worki/models/models.dart';
 
 class TareasProvider extends ChangeNotifier{
   Map<String, TareaModel> tareas = {};
+  List<TareaModel> listaTareas = [];
 
   TareaModel obtenerTarea(String codigoTarea){
     return tareas[codigoTarea]!;
+  }
+
+  void _getListaTareas(){
+    listaTareas.clear();
+    tareas.forEach((key, value) { listaTareas.add(value); });
   }
 
   void _generarTareas(){
@@ -23,6 +29,7 @@ class TareasProvider extends ChangeNotifier{
         tipoUbicacion: 'Presencial', 
         ubicacion: 'Colina Campestre, Bogota', 
         fechaPlazo: '20/05/2023',
+        urlImagen: 'https://img.freepik.com/vector-gratis/plantilla-poster-trabajo-chef-diseno-plano_23-2149913730.jpg',
       ),
 
       '000012' : TareaModel(
@@ -37,6 +44,7 @@ class TareasProvider extends ChangeNotifier{
         tipoUbicacion: 'Presencial', 
         ubicacion: 'Fontibon', 
         fechaPlazo: '14/06/2023',
+        urlImagen: 'https://edit.org/photos/img/blog/ssd-plantilla-anuncio-ninera-personalizar-online.jpg-840.jpg',
       ),
 
       '02:55am' : TareaModel(
@@ -52,12 +60,14 @@ class TareasProvider extends ChangeNotifier{
         tipoUbicacion: 'Presencial', 
         ubicacion: 'CityCampus', 
         fechaPlazo: '20/05/2023',
+        urlImagen: 'https://static.vecteezy.com/system/resources/previews/010/430/724/non_2x/app-development-poster-template-layout-mobile-programming-wireless-technology-banner-booklet-leaflet-print-design-with-linear-icons-brochure-page-layout-for-magazines-advertising-flyers-vector.jpg',
       ),
     });
   }
 
   TareasProvider(){
     _generarTareas();
+    _getListaTareas();
     print(tareas);
   }
 }
