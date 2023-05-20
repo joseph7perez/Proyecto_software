@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 class AppTheme{
   //Color principal
   static const Color primaryColor = royalBlue;
-  
+  static const Color secundaryColor = graySoft;
+  static const Color secundaryColorTransparent = graySoftTransparent;
+
   //Colores definidos
   static const Color royalBlue =  Color.fromRGBO(52, 77, 144, 1);
   static const Color graySoft =  Color.fromRGBO(123, 128, 128, 1);
+  static const Color graySoftTransparent =  Color.fromRGBO(123, 128, 128, 0.9);
   static const Color blackSteel =  Color.fromRGBO(8, 7, 6,1);
   static const Color whitePaper =  Color.fromRGBO(244, 244, 239,1);
 
