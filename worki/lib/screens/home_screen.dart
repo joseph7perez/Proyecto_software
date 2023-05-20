@@ -33,14 +33,14 @@ class _HomeScreenState extends State<HomeScreen> {
           icon: Icon(Icons.add_task_outlined),
           label: 'Crear Tarea',
         ),
-        widget: TareasDisponiblesView(),
+        widget: CrearTareaView(),
       ),
       ItemPrincipal(
         bottomNavigationBarItem: BottomNavigationBarItem(
           icon: Icon(Icons.person_outline),
           label: 'Mi cuenta',
         ),
-        widget: TareasDisponiblesView(),
+        widget: MiCuentaView(),
       ),
     ];
 

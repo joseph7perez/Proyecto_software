@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:worki/models/models.dart';
 
-class TareasDisponiblesView extends StatelessWidget {
+class CrearTareaView extends StatelessWidget {
   
-  const TareasDisponiblesView({Key? key}) : super(key: key);
+  const CrearTareaView({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class TareasDisponiblesView extends StatelessWidget {
     print('${usuario.informacionPersonal.nombre} ${usuario.informacionPersonal.apellidos}');
     return Scaffold(
       body: Center(
-        child: Text('Tareas'),
+        child: Text('Crear Tarea'),
         //Text('${usuario.informacionPersonal.nombre} ${usuario.informacionPersonal.apellidos}'),
       ),
       //bottomNavigationBar: BarraNavegacionPrincipal(),
