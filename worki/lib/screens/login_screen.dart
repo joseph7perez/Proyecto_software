@@ -4,14 +4,15 @@ import 'package:worki/widgets/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
 
-  const LoginScreen({Key? key}) : super(key: key);
+  LoginScreen({super.key});
+
+  final myFormKey = GlobalKey<FormState>();
+  final Map<String, String> formValues = {};
 
   @override
   Widget build(BuildContext context) {
 
     final size = MediaQuery.of(context).size;
-    final myFormKey = GlobalKey<FormState>();
-    final Map<String, String> formValues = {};
 
     return Scaffold(
       backgroundColor: AppTheme.whitePaper,
