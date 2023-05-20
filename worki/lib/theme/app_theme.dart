@@ -41,6 +41,15 @@ class AppTheme{
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     primaryColor: primaryColor,
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: primaryColor,
+        shape: const StadiumBorder(),
+        elevation: 0,
+      ),
+    ),
+
+
     /*
     //AppBar Theme
     appBarTheme: const AppBarTheme(
