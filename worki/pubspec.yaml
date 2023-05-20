@@ -71,6 +71,8 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/
+    - assets/icons/logo_circular_liviano.png
+    - assets/icons/logo_circular_pesado.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

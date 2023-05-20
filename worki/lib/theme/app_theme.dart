@@ -22,6 +22,13 @@ class AppTheme{
     );
   } 
 
+  static BoxDecoration createCardShape({required double radio, required Color color}) {
+    return BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(radio),
+    );
+  }
+
   //Logo
   static const String logo = 'assets/icons/logo_circular_pesado.png';
 

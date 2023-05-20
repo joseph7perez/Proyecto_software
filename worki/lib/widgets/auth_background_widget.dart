@@ -15,23 +15,37 @@ class AuthBackgroundScreen extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity,
+      decoration: AppTheme.degradado(
+        color1: AppTheme.blueDegradentIzq,
+        color2: AppTheme.blueDegradentDer,
+      ),
       child: Stack(
         children: [
-          Column(
-            children: [
-              _CajaDegradada(
+          /* Column(
+            children: [ */
+              /* _CajaDegradada(
                 color1: AppTheme.blueDegradentIzq,
                 color2: AppTheme.blueDegradentDer,
                 size: size,
-              ),
+              ), */
               _CajaDegradada(
                 color1: AppTheme.grayDegradentIzq,
                 color2: AppTheme.grayDegradentDer,
                 size: size,
               ),
-            ],
-          ),
-          Center(child: this.child),
+              SafeArea(
+                child: Container(
+                  margin: EdgeInsets.all(35),
+                  alignment: Alignment.center,
+                  child: CircleAvatar(
+                    maxRadius: 100,
+                    backgroundImage: AssetImage('assets/icons/logo_circular_pesado.png'),
+                  ),
+                ),
+              ),
+            /* ],
+          ), */
+          this.child,
         ],
       ),
       //child: child,
