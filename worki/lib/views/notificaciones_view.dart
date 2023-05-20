@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:worki/models/models.dart';
+import 'package:worki/widgets/widgets.dart';
 
-class TareasDisponiblesScreen extends StatelessWidget {
+class NotificacionesView extends StatelessWidget {
   
-  const TareasDisponiblesScreen({Key? key}) : super(key: key);
+  const NotificacionesView({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
@@ -13,8 +14,10 @@ class TareasDisponiblesScreen extends StatelessWidget {
     print('${usuario.informacionPersonal.nombre} ${usuario.informacionPersonal.apellidos}');
     return Scaffold(
       body: Center(
-        child: Text('${usuario.informacionPersonal.nombre} ${usuario.informacionPersonal.apellidos}'),
+        child: Text('Notis'),
+        //Text('${usuario.informacionPersonal.nombre} ${usuario.informacionPersonal.apellidos}'),
       ),
+      bottomNavigationBar: BarraNavegacionPrincipal(),
     );
   }
 }

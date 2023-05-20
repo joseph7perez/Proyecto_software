@@ -8,7 +8,7 @@ class AppRoutes{
     Map<String, Widget Function(BuildContext)> appRoutes = {};
     appRoutes.addAll({ '/login' : (context) => LoginScreen()});
     appRoutes.addAll({ '/sign_up' : (context) => const  SignUpScreen()});
-    appRoutes.addAll({ '/tareas_disponibles' : (context) => const  TareasDisponiblesScreen()});
+    appRoutes.addAll({ '/home' : (context) => const  HomeScreen()});
     return appRoutes;
   }
 }

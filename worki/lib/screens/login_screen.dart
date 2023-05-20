@@ -89,7 +89,7 @@ class _FormCamps extends StatelessWidget {
                 if(usuariosProvider.buscarUsuario(formValues['email']!, formValues['password']!)){
                   Navigator.pushNamed(
                     context, 
-                    '/tareas_disponibles', 
+                    '/home', 
                     arguments: usuariosProvider.obtenerUsuario(formValues['email']!)
                   );
                   return;  
