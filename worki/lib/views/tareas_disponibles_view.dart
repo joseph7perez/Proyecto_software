@@ -17,7 +17,7 @@ class TareasDisponiblesView extends StatelessWidget {
         child: Text('Tareas'),
         //Text('${usuario.informacionPersonal.nombre} ${usuario.informacionPersonal.apellidos}'),
       ),
-      bottomNavigationBar: BarraNavegacionPrincipal(),
+      //bottomNavigationBar: BarraNavegacionPrincipal(),
     );
   }
 }

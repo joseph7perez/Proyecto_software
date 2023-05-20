@@ -1,48 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:worki/providers/providers.dart';
 import 'package:worki/theme/app_theme.dart';
 import 'package:worki/views/views.dart';
 
 class BarraNavegacionPrincipal extends StatefulWidget {
-  const BarraNavegacionPrincipal({super.key});
+  BarraNavegacionPrincipal({
+    required this.itemsPrincipales,
+    required this.itemProvider,
+  });
+
+  final List<ItemPrincipal> itemsPrincipales;
+  ItemButtomBarProvider itemProvider;
 
   @override
-  State<BarraNavegacionPrincipal> createState() => _BarraNavegacionPrincipalState();
+  State<BarraNavegacionPrincipal> createState() => _BarraNavegacionPrincipalState(
+    itemsPrincipales:itemsPrincipales,
+    itemProvider: itemProvider,
+  );
 }
 
 class _BarraNavegacionPrincipalState extends State<BarraNavegacionPrincipal> {
 
-  int itemActual = 0;
-
-  final itemsPrincipales = [
-    ItemPrincipal(
-      bottomNavigationBarItem: BottomNavigationBarItem(
-        icon: Icon(Icons.notifications_outlined),
-        label: 'Notificaciones',
-      ),
-      widget: NotificacionesView(),
-    ),
-    ItemPrincipal(
-      bottomNavigationBarItem: BottomNavigationBarItem(
-        icon: Icon(Icons.home_outlined),
-        label: 'Tareas Disponibles',
-      ),
-      widget: TareasDisponiblesView(),
-    ),
-    ItemPrincipal(
-      bottomNavigationBarItem: BottomNavigationBarItem(
-        icon: Icon(Icons.add_task_outlined),
-        label: 'Crear Tarea',
-      ),
-      widget: TareasDisponiblesView(),
-    ),
-    ItemPrincipal(
-      bottomNavigationBarItem: BottomNavigationBarItem(
-        icon: Icon(Icons.person_outline),
-        label: 'Mi cuenta',
-      ),
-      widget: TareasDisponiblesView(),
-    ),
-  ];
+  final List<ItemPrincipal> itemsPrincipales;
+  ItemButtomBarProvider itemProvider;
+  _BarraNavegacionPrincipalState({
+    required this.itemsPrincipales,
+    required this.itemProvider
+  }); 
 
   @override
   Widget build(BuildContext context) {
@@ -51,9 +35,10 @@ class _BarraNavegacionPrincipalState extends State<BarraNavegacionPrincipal> {
       selectedItemColor: AppTheme.whitePaper,
       unselectedItemColor: AppTheme.secundaryColor,
       type: BottomNavigationBarType.fixed,
-      currentIndex: itemActual,
+      currentIndex: itemProvider.itemActual,
       onTap: (value) {
-        itemActual = value;
+        itemProvider.setItemActual(value);
+        //itemActual = value;
         print(value);
         setState(() {});
       },
@@ -67,12 +52,3 @@ class _BarraNavegacionPrincipalState extends State<BarraNavegacionPrincipal> {
   }
 }
 
-class ItemPrincipal{
-  BottomNavigationBarItem bottomNavigationBarItem;
-  Widget widget;
-
-  ItemPrincipal({
-    required this.bottomNavigationBarItem,
-    required this.widget,
-  });
-}

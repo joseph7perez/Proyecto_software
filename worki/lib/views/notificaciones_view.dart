@@ -17,7 +17,7 @@ class NotificacionesView extends StatelessWidget {
         child: Text('Notis'),
         //Text('${usuario.informacionPersonal.nombre} ${usuario.informacionPersonal.apellidos}'),
       ),
-      bottomNavigationBar: BarraNavegacionPrincipal(),
+      //bottomNavigationBar: BarraNavegacionPrincipal(),
     );
   }
 }

@@ -13,6 +13,7 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => UsuariosProvider(), lazy: false,),
+        ChangeNotifierProvider(create: (_) => ItemButtomBarProvider(), lazy: false,),
       ],
       child: const MyApp(),
     );
