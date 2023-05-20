@@ -12,6 +12,7 @@ class CustomInputField extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool obscureText;
   final String formProperty;
+  final Function validator;
   final Map<String, String> formValues;
 
 
@@ -27,7 +28,8 @@ class CustomInputField extends StatelessWidget {
     this.keyboardType,
     this.obscureText = false, 
     required this.formProperty, 
-    required this.formValues,
+    required this.formValues, 
+    required this.validator,
   });
 
   @override
@@ -37,10 +39,11 @@ class CustomInputField extends StatelessWidget {
       onChanged: (value) {
         formValues[formProperty] = value;
       },
-      validator: (value) {
+      validator: (value) => validator(value),
+      /* validator: (value) {
         if(value==null) return "Valor requerido";
         if(keyboardType==TextInputType.emailAddress && !value.contains('@')) return 'Formato incorrecto';
-      },
+      }, */
       //autofocus: true,
       keyboardType: keyboardType,
       obscureText: obscureText,

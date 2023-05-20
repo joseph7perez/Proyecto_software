@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:worki/providers/providers.dart';
 import 'package:worki/theme/app_theme.dart';
 import 'package:worki/widgets/widgets.dart';
 
@@ -11,7 +12,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+    final usuariosProvider = Provider.of<UsuariosProvider>(context);
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -25,7 +26,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [        
                 _LogoLogin(size: size),
-                _FormCamps(formValues: formValues, myFormKey: myFormKey, size: size), 
+                _FormCamps(formValues: formValues, myFormKey: myFormKey, size: size, usuariosProvider: usuariosProvider), 
               ],
             ),
           ),
@@ -40,9 +41,11 @@ class _FormCamps extends StatelessWidget {
   const _FormCamps({
     required this.formValues,
     required this.myFormKey,
-    required this.size,
+    required this.size, 
+    required this.usuariosProvider,
   });
 
+  final UsuariosProvider usuariosProvider;
   final Map<String, String> formValues;
   final GlobalKey<FormState> myFormKey;
   final Size size;
@@ -60,6 +63,10 @@ class _FormCamps extends StatelessWidget {
             formProperty: 'email',
             formValues: formValues,
             keyboardType: TextInputType.emailAddress,
+            validator: (value) {
+              if(value==null) return "Valor requerido";
+              if(!value.toString().contains('@')) return 'Formato incorrecto';
+            },
           ),
           SizedBox(height: 30,),
           CustomInputField(
@@ -69,12 +76,27 @@ class _FormCamps extends StatelessWidget {
             formProperty: 'password',
             formValues: formValues,
             obscureText: true,
+            validator: (value) {
+              if(value==null) return "Valor requerido";
+              if(value.toString().isEmpty) return "Valor requerido";
+            }, 
           ),
           SizedBox(height: 50,),
           ElevatedButton(
             onPressed: (){
               print(formValues);
-              if(myFormKey.currentState!.validate()) return alertaValidaciones(context, "Bien hecho!");
+              if(myFormKey.currentState!.validate()){
+                if(usuariosProvider.buscarUsuario(formValues['email']!, formValues['password']!)){
+                  Navigator.pushNamed(
+                    context, 
+                    '/tareas_disponibles', 
+                    arguments: usuariosProvider.obtenerUsuario(formValues['email']!)
+                  );
+                  return;  
+                } else{
+                  return alertaValidaciones(context, "Credenciales incorrectas");
+                }
+              } 
               return alertaValidaciones(context, "Formularios Incompletos");
             },
             child: Container(

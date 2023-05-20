@@ -4,10 +4,22 @@ import 'package:worki/models/models.dart';
 class UsuariosProvider extends ChangeNotifier{
   Map<String, UsuarioModel> usuarios = {};
 
+  bool buscarUsuario(String usuario, String password){
+    if(!usuarios.containsKey(usuario)) return false;
+    if(usuarios[usuario]!.informacionWorki.password==password){
+      return true;
+    }
+    return false;
+  }
+
+  UsuarioModel obtenerUsuario(String usuario){
+    return usuarios[usuario]!;
+  }
+
   void _generarUsuarios(){
     usuarios.addAll(
       {
-        'aleal' : UsuarioModel(
+        '@aleal' : UsuarioModel(
           informacionPersonal: InformacionPersonalModel(
             nombre: 'David', 
             apellidos: 'Leal', 
@@ -22,8 +34,8 @@ class UsuariosProvider extends ChangeNotifier{
             lugarResidencia: 'Bogota',
           ), 
           informacionWorki: InformacionWorkiModel(
-            arroba: 'lealuski', 
-            password: 'lealuski',
+            arroba: '@aleal', 
+            password: 'aleal',
           ),
         ),
       }
