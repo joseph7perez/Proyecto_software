@@ -15,23 +15,53 @@ class TareasDisponiblesView extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: AppTheme.graySoft,
-      body: Center(
-        child: Container(
-          width: double.infinity,
-          height: size.height*0.9,
-          child: Swiper(
-            itemCount: 10,
-            layout: SwiperLayout.STACK,
-            itemWidth: size.width*0.9,
-            itemHeight: size.height*0.8,
-            itemBuilder: (context, index) {
-              return FadeInImage(
-                placeholder: AssetImage('assets/imgs/foto_perfil_defecto.jpg'), 
-                image: AssetImage('assets/imgs/carta_defecto.jpg'),
-                fit: BoxFit.cover,
-              );
-            },
-          ),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 40),
+        child: Column(
+          children:[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: (){}, 
+                  icon: Icon(Icons.ramen_dining_outlined, color: AppTheme.whitePaper,),
+                ),
+                TextButton(
+                  onPressed: (){} , 
+                  child: Text('Siguiendo', style: TextStyle(
+                    color: AppTheme.whitePaper,
+                  ),),
+                ),
+                TextButton(
+                  onPressed: (){} , 
+                  child: Text('Para ti', style: TextStyle(
+                    color: AppTheme.whitePaper,
+                  ),),
+                ),
+                IconButton(
+                  onPressed: (){}, 
+                  icon: Icon(Icons.search_sharp, color: AppTheme.whitePaper,),
+                ),
+              ],
+            ),
+            Container(
+              width: double.infinity,
+              height: size.height*0.6,
+              child: Swiper(
+                itemCount: 10,
+                layout: SwiperLayout.STACK,
+                itemWidth: size.width*0.9,
+                itemHeight: size.height*0.8,
+                itemBuilder: (context, index) {
+                  return FadeInImage(
+                    placeholder:  AssetImage('assets/imgs/carta_defecto.jpg'),
+                    image: AssetImage('assets/imgs/carta_defecto.jpg'),
+                    fit: BoxFit.cover,
+                  );
+                },
+              ),
+            ),
+          ] 
         ),
       )
     );
