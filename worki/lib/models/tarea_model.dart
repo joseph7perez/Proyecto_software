@@ -5,31 +5,33 @@ class TareaModel{
   String creador;
   String estado;
   List<String>? postulados;
-  CalificacionModel calificacion;
-  String empleado;
+  CalificacionModel? calificacion;
+  String? empleado;
   String titulo;
+  String descripcion;
   List<String> sectores;
   double presupuesto;
   double rankMinimo;
   List<String> requerimientos;
   String tipoUbicacion;
-  String? ubicacion;
+  String ubicacion;
   String fechaPlazo;
 
   TareaModel({
     required this.codigo,
     required this.creador,
     required this.estado,
-    required this.postulados,
-    required this.calificacion,
-    required this.empleado,
+    this.postulados,
+    this.calificacion,
+    this.empleado,
     required this.titulo,
+    required this.descripcion,
     required this.sectores,
     required this.presupuesto,
     required this.rankMinimo,
-    required this.tipoUbicacion,
-    required this.fechaPlazo,
     required this.requerimientos,
-    this.ubicacion,
+    required this.tipoUbicacion,
+    required this.ubicacion,
+    required this.fechaPlazo,
   });
 }

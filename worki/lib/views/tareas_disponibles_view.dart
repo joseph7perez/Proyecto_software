@@ -44,21 +44,23 @@ class TareasDisponiblesView extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              width: double.infinity,
-              height: size.height*0.6,
-              child: Swiper(
-                itemCount: 10,
-                layout: SwiperLayout.STACK,
-                itemWidth: size.width*0.9,
-                itemHeight: size.height*0.8,
-                itemBuilder: (context, index) {
-                  return FadeInImage(
-                    placeholder:  AssetImage('assets/imgs/carta_defecto.jpg'),
-                    image: AssetImage('assets/imgs/carta_defecto.jpg'),
-                    fit: BoxFit.cover,
-                  );
-                },
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                height: size.height*0.6,
+                child: Swiper(
+                  itemCount: 10,
+                  layout: SwiperLayout.STACK,
+                  itemWidth: size.width*0.9,
+                  itemHeight: size.height*0.8,
+                  itemBuilder: (context, index) {
+                    return FadeInImage(
+                      placeholder:  AssetImage('assets/imgs/carta_defecto.jpg'),
+                      image: AssetImage('assets/imgs/carta_defecto.jpg'),
+                      fit: BoxFit.cover,
+                    );
+                  },
+                ),
               ),
             ),
           ] 
