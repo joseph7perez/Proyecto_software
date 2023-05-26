@@ -25,7 +25,6 @@ class SignUpInfoWorkiScreen extends StatelessWidget {
                 children: [
                   _LogoTexto(),
                   InfoWorkiSignUp(formValues: formValues, myFormKey: myFormKey)
-                  
                 ],
               ),
             ),

@@ -11,7 +11,6 @@ class AppRoutes{
     appRoutes.addAll({ '/tarea_detallada' : (context) => TareaDetalladaScreen()});
     appRoutes.addAll({ '/sign_up_info_personal' : (context) => SignUpInfoPersonalScreen()});
     appRoutes.addAll({ '/sign_up_info_worki' : (context) => SignUpInfoWorkiScreen()});
-    appRoutes.addAll({ '/sign_up_historias' : (context) => SignUpHistoriasScreen()});
     return appRoutes;
   }
 }

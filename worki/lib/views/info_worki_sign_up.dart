@@ -122,7 +122,7 @@ class _FormCamps extends StatelessWidget {
                   sectores: [formValues['sectores']],
                 );
                 crearUsuarioProvider.informacionWorki = informacionWorki;
-                Navigator.pushNamed(context, '/sign_up_historias');
+                Navigator.pushNamed(context, '/home', arguments: crearUsuarioProvider.crearUsuario(context));
               } else return alertaValidaciones(context, 'Formularios Incompletos');
             },
             child: Container(

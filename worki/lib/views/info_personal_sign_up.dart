@@ -111,7 +111,7 @@ class _FormCamps extends StatelessWidget {
             validator: (value) {
               if (value == null) return 'Valor requerido';
               if (value.toString().length!=10) return 'Formato incorrecto (dd/mm/yyyy)';
-              if(!tieneSolo('/', value.toString(), 3)) return 'Son 3 /';;
+              if(!tieneSolo('/', value.toString(), 2)) return 'Son 2 /';;
             },
           ),
           //Genero
