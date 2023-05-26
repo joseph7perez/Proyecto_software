@@ -16,6 +16,10 @@ class UsuariosProvider extends ChangeNotifier{
     return usuarios[usuario]!;
   }
 
+  void crearUsuario(UsuarioModel usuario){
+    usuarios[usuario.informacionWorki.arroba]  = usuario;
+  }
+
   void _generarUsuarios(){
     usuarios.addAll({
       '@aleal' : UsuarioModel(

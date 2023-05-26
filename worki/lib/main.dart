@@ -14,6 +14,7 @@ class AppState extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => TareasProvider(), lazy: false,),
         ChangeNotifierProvider(create: (_) => UsuariosProvider(), lazy: false,),
+        ChangeNotifierProvider(create: (_) => CrearUsuarioProvider(), lazy: false,),
       ],
       child: const MyApp(),
     );

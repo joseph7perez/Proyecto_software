@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:worki/models/models.dart';
+import 'package:worki/providers/providers.dart';
 import 'package:worki/theme/app_theme.dart';
 import 'package:worki/widgets/widgets.dart';
 
@@ -41,6 +42,7 @@ class _FormCamps extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final CrearUsuarioProvider crearUsuarioProvider = Provider.of<CrearUsuarioProvider>(context);
     final size = MediaQuery.of(context).size;
     return Container(
       decoration: AppTheme.degradado(
@@ -162,7 +164,8 @@ class _FormCamps extends StatelessWidget {
                   cedula: int.parse(formValues['cedula']), 
                   lugarResidencia: formValues['lugarResidencia'], 
                 );
-                Navigator.pushNamed(context, '/sign_up_info_worki', arguments: informacionPersonal);
+                crearUsuarioProvider.informacionPersonal = informacionPersonal;
+                Navigator.pushNamed(context, '/sign_up_info_worki');
               } else return alertaValidaciones(context, 'Formularios Incompletos');
             },
             child: Container(
