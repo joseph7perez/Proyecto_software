@@ -40,6 +40,7 @@ class UsuariosProvider extends ChangeNotifier{
         informacionWorki: InformacionWorkiModel(
           arroba: '@aleal', 
           password: 'aleal',
+          sectores: ['Desarrollo Movil'],
           fotoPerfil: 'https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2016/09/569465-whatsapp-que-tus-contactos-ponen-rana-perfil.jpg?itok=tpvHWpeZ',
         ),
       ),
@@ -58,6 +59,8 @@ class UsuariosProvider extends ChangeNotifier{
         informacionWorki: InformacionWorkiModel(
           arroba: '@majo', 
           password: 'majo',
+          sectores: ['Arquitecta'],
+          fotoPerfil: 'https://i.pinimg.com/564x/87/40/ea/8740eab500549a7539ad5bafeb6d69fd.jpg',
         ),
       ),
 
@@ -75,6 +78,7 @@ class UsuariosProvider extends ChangeNotifier{
         informacionWorki: InformacionWorkiModel(
           arroba: '@joseph', 
           password: 'joseph',
+          sectores: ['Comerciante'],
           fotoPerfil: 'https://falabella.scene7.com/is/image/FalabellaCO/5369705_1?wid=1500&hei=1500&qlt=70',
         ),
       ),
