@@ -14,7 +14,8 @@ class CustomInputField extends StatelessWidget {
   final bool obscureText;
   final String formProperty;
   final Function validator;
-  final Map<String, String> formValues;
+  final Map<String, dynamic> formValues;
+  final TextCapitalization? tipoTexto;
 
 
   const CustomInputField({
@@ -28,43 +29,38 @@ class CustomInputField extends StatelessWidget {
     this.icon, 
     this.keyboardType,
     this.obscureText = false, 
+    this.tipoTexto = TextCapitalization.none,
     required this.formProperty, 
     required this.formValues, 
-    required this.validator,
+    required this.validator, 
   });
 
   @override
   Widget build(BuildContext context) {
-    final textStyleForms = TextStyle(color: AppTheme.whitePaper);
-    return TextFormField(
-      textCapitalization: TextCapitalization.words,
-      onChanged: (value) {
-        formValues[formProperty] = value;
-      },
-      validator: (value) => validator(value),
-      /* validator: (value) {
-        if(value==null) return "Valor requerido";
-        if(keyboardType==TextInputType.emailAddress && !value.contains('@')) return 'Formato incorrecto';
-      }, */
-      //autofocus: true,
-      keyboardType: keyboardType,
-      obscureText: obscureText,
-      autovalidateMode: AutovalidateMode.onUserInteraction,
-      decoration: InputDecoration(
-        hintText: hintText,
-        labelText: labelText,
-        helperText: helperText,
-        counterText: counterText,
-        suffixIcon: suffixIcon,
-        prefixIcon: prefixIcon,
-        icon: icon,
-        //Styles
-        hintStyle: textStyleForms,
-        labelStyle: textStyleForms,
-        helperStyle: textStyleForms,
-        counterStyle: textStyleForms,
-        suffixIconColor: AppTheme.whitePaper,
-        prefixIconColor: AppTheme.whitePaper,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 30),
+      child: TextFormField(
+        textCapitalization: tipoTexto!,
+        onChanged: (value) {
+          formValues[formProperty] = value;
+        },
+        validator: (value) => validator(value),
+        keyboardType: keyboardType,
+        obscureText: obscureText,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        decoration: InputDecoration(
+          hintText: hintText,
+          labelText: labelText,
+          helperText: helperText,
+          counterText: counterText,
+          suffixIcon: suffixIcon,
+          prefixIcon: prefixIcon,
+          icon: icon,
+          //Styles
+          labelStyle: TextStyle(color: AppTheme.whitePaper),
+          suffixIconColor: AppTheme.whitePaper,
+          prefixIconColor: AppTheme.whitePaper,
+        ),
       ),
     );
   }

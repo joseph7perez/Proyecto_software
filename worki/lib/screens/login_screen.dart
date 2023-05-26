@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
               key: myFormKey,
               child: Column(
                 children: [
-                  _LogoLogin(),
+                  _LogoIcon(),
                   _FormCamps(formValues: formValues, myFormKey: myFormKey),
                 ],
               ),
@@ -36,8 +36,8 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-class _LogoLogin extends StatelessWidget {
-  const _LogoLogin();
+class _LogoIcon extends StatelessWidget {
+  const _LogoIcon();
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -88,9 +88,6 @@ class _FormCamps extends StatelessWidget {
               if (!value.toString().contains('@')) return 'Formato incorrecto';
             },
           ),
-          SizedBox(
-            height: 30,
-          ),
           //Password
           CustomInputField(
             hintText: '123456',
@@ -103,9 +100,6 @@ class _FormCamps extends StatelessWidget {
               if (value == null) return 'Valor requerido';
               if (value.toString().isEmpty) return 'Valor requerido';
             },
-          ),
-          SizedBox(
-            height: 30,
           ),
           //Boton Ingresar
           ElevatedButton(
@@ -126,7 +120,7 @@ class _FormCamps extends StatelessWidget {
           ),
           //Boton Crear cuenta
           ElevatedButton(
-            onPressed: () => Navigator.pushNamed(context, '/sign_up'),
+            onPressed: () => Navigator.pushNamed(context, '/sign_up_info_personal'),
             child: Container(
               child: Text('Crear cuenta', textAlign: TextAlign.center),
               width: size.width * 0.6,

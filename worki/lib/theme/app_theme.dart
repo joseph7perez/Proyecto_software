@@ -50,17 +50,13 @@ class AppTheme{
       ),
     ),
 
-    /*
-    //AppBar Theme
-    appBarTheme: const AppBarTheme(
-      color: Color.fromARGB(52, 22, 69, 222),
-      elevation: 0,
-      centerTitle: true,
+    inputDecorationTheme: const InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
     ),
-
-    //TextButton Theme
-    textButtonTheme: TextButtonThemeData(
-      style: TextButton.styleFrom(foregroundColor: primaryColor),
-    ),*/
   );
 }

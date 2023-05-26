@@ -4,7 +4,7 @@ class InformacionPersonalModel{
   String nombre;
   String apellidos;
   String correo;
-  NumeroCelularModel celular;
+  int celular;
   String fechaNacimiento;
   String genero;
   String lugarResidencia;

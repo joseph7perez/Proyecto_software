@@ -116,7 +116,7 @@ class _DescripcionCreador extends StatelessWidget {
                   children: [
                     const Icon(Icons.star_border_purple500, color: Colors.grey,),
                     const SizedBox(width: 5,),
-                    Text(usuarioCreador.informacionPersonal.celular.numero.toString(), style: textTheme.bodySmall,),
+                    //Text(usuarioCreador.informacionPersonal.celular.numero.toString(), style: textTheme.bodySmall,),
                   ],
                 )
               ],

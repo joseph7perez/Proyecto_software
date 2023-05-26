@@ -73,8 +73,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/imgs/
-    - assets/icons/logo_circular_liviano.png
-    - assets/icons/logo_circular_pesado.png
+    - assets/icons/
     #- assets/imgs/foto_perfil_defecto.jpg
     #- assets/imgs/loading.gif
 

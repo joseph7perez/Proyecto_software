@@ -15,7 +15,6 @@ export 'package:worki/models/mision_model.dart';
 export 'package:worki/models/movimiento_model.dart';
 export 'package:worki/models/noti_calificacion_model.dart';
 export 'package:worki/models/notificacion_model.dart';
-export 'package:worki/models/numero_celular_model.dart';
 export 'package:worki/models/rank_model.dart';
 export 'package:worki/models/tarea_model.dart';
 export 'package:worki/models/tareas_personales_model.dart';
