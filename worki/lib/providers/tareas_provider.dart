@@ -18,6 +18,36 @@ class TareasProvider extends ChangeNotifier {
 
   void _generarTareas() {
     tareas.addAll({
+      '000012' : TareaModel(
+        codigo: '000012',
+        creador: '@majo', 
+        estado: 'Por hacer', 
+        titulo: 'Niñera para niña de 8 años.',
+        sectores: List.generate(1, (index) => 'Doméstico'), 
+        presupuesto: 120000, 
+        rankMinimo: 50, 
+        requerimientos: List.generate(1, (index) => 'persona con experiencia cuidando niños, paciente, que sepa cocinar'),
+        tipoUbicacion: 'Presencial', 
+        ubicacion: 'Fontibon', 
+        fechaPlazo: '14/06/2023',
+        urlImagen: 'https://edit.org/photos/img/blog/ssd-plantilla-anuncio-ninera-personalizar-online.jpg-840.jpg',
+      ),
+
+      '02:55am' : TareaModel(
+        codigo: '02:55am',
+        creador: '@aleal', 
+        estado: 'Haciendo', 
+        titulo: 'Desarrollador Movil.',
+        descripcion: 'Para presentar aplicacion llamada worki.',
+        sectores: List.generate(1, (index) => 'Desarrollo Movil'), 
+        presupuesto: 9999999, 
+        rankMinimo: 9999999, 
+        requerimientos: List.generate(1, (index) => 'Solo acabalo rapido por favor'),
+        tipoUbicacion: 'Presencial', 
+        ubicacion: 'CityCampus', 
+        fechaPlazo: '20/05/2023',
+        urlImagen: 'https://static.vecteezy.com/system/resources/previews/010/430/724/non_2x/app-development-poster-template-layout-mobile-programming-wireless-technology-banner-booklet-leaflet-print-design-with-linear-icons-brochure-page-layout-for-magazines-advertising-flyers-vector.jpg',
+      ),
       '10': TareaModel(
         codigo: '10',
         creador: '@joseph',

@@ -79,7 +79,7 @@ class UsuariosProvider extends ChangeNotifier{
           arroba: '@joseph', 
           password: 'joseph',
           sectores: ['Comerciante'],
-          fotoPerfil: 'https://falabella.scene7.com/is/image/FalabellaCO/5369705_1?wid=1500&hei=1500&qlt=70',
+          fotoPerfil: 'https://m.media-amazon.com/images/I/81-OZj1Q09L._SL1500_.jpg',
         ),
       ),
     });
