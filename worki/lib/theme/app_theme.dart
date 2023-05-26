@@ -12,6 +12,7 @@ class AppTheme{
   static const Color graySoftTransparent =  Color.fromRGBO(123, 128, 128, 0.9);
   static const Color blackSteel =  Color.fromRGBO(8, 7, 6,1);
   static const Color whitePaper =  Color.fromRGBO(244, 244, 239,1);
+  static const Color transparente =  Color.fromARGB(0, 0, 0, 0);
 
   //Colores degradados
   static const Color blueDegradentIzq =  Color.fromRGBO(52, 70, 144, 1);
@@ -40,18 +41,14 @@ class AppTheme{
     fontSize: 25,
   );
 
-
-
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     primaryColor: primaryColor,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: primaryColor,
+        backgroundColor: secundaryColor,
         shape: const StadiumBorder(),
-        elevation: 0,
       ),
     ),
-
 
     /*
     //AppBar Theme

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:worki/theme/app_theme.dart';
 
 class CustomInputField extends StatelessWidget {
 
@@ -34,6 +35,7 @@ class CustomInputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyleForms = TextStyle(color: AppTheme.whitePaper);
     return TextFormField(
       textCapitalization: TextCapitalization.words,
       onChanged: (value) {
@@ -56,6 +58,13 @@ class CustomInputField extends StatelessWidget {
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
         icon: icon,
+        //Styles
+        hintStyle: textStyleForms,
+        labelStyle: textStyleForms,
+        helperStyle: textStyleForms,
+        counterStyle: textStyleForms,
+        suffixIconColor: AppTheme.whitePaper,
+        prefixIconColor: AppTheme.whitePaper,
       ),
     );
   }
