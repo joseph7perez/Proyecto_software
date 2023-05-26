@@ -106,6 +106,14 @@ class _FormCamps extends StatelessWidget {
               if (value.toString().isEmpty) return 'Valor requerido';
             },
           ),
+          //url foto perfil
+          CustomInputField(
+            hintText: 'https://img.jpg',
+            labelText: 'Url de foto de perfil',
+            formProperty: 'fotoPerfil',
+            formValues: formValues,
+            validator: (value) {},
+          ),
           //Boton siguiente
           ElevatedButton(
             onPressed: () {
@@ -120,6 +128,7 @@ class _FormCamps extends StatelessWidget {
                   arroba: formValues['arroba'],
                   password: formValues['password1'],
                   sectores: [formValues['sectores']],
+                  fotoPerfil: formValues['fotoPerfil']??'',
                 );
                 crearUsuarioProvider.informacionWorki = informacionWorki;
                 Navigator.pushNamed(context, '/home', arguments: crearUsuarioProvider.crearUsuario(context));

@@ -60,7 +60,7 @@ class UsuariosProvider extends ChangeNotifier{
           arroba: '@majo', 
           password: 'majo',
           sectores: ['Arquitecta'],
-          fotoPerfil: 'https://i.pinimg.com/564x/87/40/ea/8740eab500549a7539ad5bafeb6d69fd.jpg',
+          fotoPerfil: 'https://scontent.fbog10-1.fna.fbcdn.net/v/t1.6435-9/116587549_129206498875517_1442075699111814882_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=973b4a&_nc_ohc=_8AZo38KjsMAX9G_88c&_nc_ht=scontent.fbog10-1.fna&oh=00_AfB2vVk0ARTI01nJJPL8qVgu97DG6vCJV3ezB6ggBuuK3A&oe=6497B1A3',
         ),
       ),
 
