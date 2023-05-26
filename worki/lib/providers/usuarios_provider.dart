@@ -12,6 +12,10 @@ class UsuariosProvider extends ChangeNotifier{
     return false;
   }
 
+  bool existeUsuario(String usuario){
+    return usuarios.containsKey(usuario);
+  }
+
   UsuarioModel obtenerUsuario(String usuario){
     return usuarios[usuario]!;
   }

@@ -24,7 +24,7 @@ class SignUpInfoWorkiScreen extends StatelessWidget {
               child: Column(
                 children: [
                   _LogoTexto(),
-                  InfoPersonalSignUp(formValues: formValues, myFormKey: myFormKey)
+                  InfoWorkiSignUp(formValues: formValues, myFormKey: myFormKey)
                   
                 ],
               ),
